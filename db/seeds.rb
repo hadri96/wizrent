@@ -80,5 +80,3 @@ characters.map! do |character|
     description: descriptions[character['name']]
   }
 end
-
-puts characters
