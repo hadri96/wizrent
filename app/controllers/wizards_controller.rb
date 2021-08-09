@@ -18,6 +18,7 @@ class WizardsController < ApplicationController
       redirect_to wizards_path
     else
       render :new
+    end
   end
   
   def edit
