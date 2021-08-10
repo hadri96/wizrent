@@ -15,6 +15,7 @@ class WizardsController < ApplicationController
 
   def create
     @wizard = Wizard.new(wizard_params)
+    @wizard.user = current_user
     if @wizard.save
       redirect_to wizards_path
     else
@@ -42,6 +43,6 @@ class WizardsController < ApplicationController
   end
 
   def wizard_params
-    params.require(:wizard).permit(:name, :eye_color, :hair_color, :sex, :house, :price, :picture_url, :description, :user_id, :species)
+    params.require(:wizard).permit(:name, :eye_color, :hair_color, :sex, :house, :price, :picture_url, :description, :species)
   end
 end
