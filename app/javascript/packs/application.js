@@ -22,6 +22,13 @@ require("channels")
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
 
+import { initUpdateNavbarOnScroll } from '../components/navbar';
+
+document.addEventListener('turbolinks:load', () => {
+  // Call your JS functions here
+  initUpdateNavbarOnScroll();
+});
+
 // External imports
 import "bootstrap";
 
