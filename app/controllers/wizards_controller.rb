@@ -1,13 +1,14 @@
 class WizardsController < ApplicationController
   before_action :set_wizard, only :show
-  
+  skip_before_action :authenticate_user!, only:[:index, :show]
+
   def index
     @wizards = Wizard.all
   end
-  
+
   def show
   end
-  
+
   def new
     @wizard = Wizard.new
   end
@@ -20,7 +21,7 @@ class WizardsController < ApplicationController
       render :new
     end
   end
-  
+
   def edit
   end
 
