@@ -11,3 +11,14 @@
 #navbarSupportedContent {
   text-align: center;
 }
+
+.linkone {
+  display: flex;
+  width: 60%;
+}
+
+.linktwo {
+  display: flex;
+  width: 40%;
+  justify-content: flex-end;
+}
