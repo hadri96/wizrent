@@ -1,0 +1,16 @@
+<h1>Edit flat</h1>
+
+<%= simple_form_for @wizard do |f| %>
+  <%= f.input :name %>
+  <%= f.input :eye_color %>
+  <%= f.input :hair_color %>
+  <%= f.input :house %>
+  <%= f.input :price %>
+  <%= f.input :picture_url %>
+  <%= f.input :description %>
+  <%= f.input :species %>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
+
+<%= link_to 'Show', @wizard %> |
+<%= link_to 'Back', wizards_path %>
