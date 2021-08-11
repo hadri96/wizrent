@@ -13,10 +13,10 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card-category img {
+.card-category > img {
   width: 100%;
-  height: 15vw;
   object-fit: cover;
+  object-position: 50% 0;
 }
 
 .card-category a {

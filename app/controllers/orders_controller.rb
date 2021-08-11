@@ -8,10 +8,12 @@ class OrdersController < ApplicationController
   end
 
   def new
+    @wizard = Wizard.find(params[:wizard_id])
     @order = Order.new
   end
 
   def create
+    @wizard = Wizard.find(params[:wizard_id])
     @order = Order.new(order_params)
     @order.user = current_user
     @order.wizard = @wizard
