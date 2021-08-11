@@ -10,7 +10,6 @@
     <div class="card-category card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/1600x900/?harrypotter,<%= wizard.name.split.first  %>)">
       <%= link_to wizard.name, wizard_path(wizard) %>
       <%= wizard.price %>
-      <%= wizard.description %>
       <%= wizard.picture_url %>
     </div>
   <% end %>
