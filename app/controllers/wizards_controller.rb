@@ -44,6 +44,6 @@ class WizardsController < ApplicationController
   end
 
   def wizard_params
-    params.require(:wizard).permit(:name, :eye_color, :hair_color, :sex, :house, :price, :picture_url, :description, :user_id, :species)
+    params.require(:wizard).permit(:name, :eye_color, :hair_color, :sex, :house, :price, :picture_url, :description, :species)
   end
 end

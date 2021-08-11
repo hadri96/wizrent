@@ -1,0 +1,15 @@
+<div class="navbar fixed-top navbar-expand-sm navbar-light navbar-lewagon px-3 ">
+  <%= image_tag "Logo-navbar.png", alt: "alttext", class: "logo" %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="linkone" id="navbarSupportedContent">
+    <%= link_to "Wizards", "#", class: "btn btn-noborder" %>
+    <%= link_to "Login", "#", class: "btn btn-noborder" %>
+  </div>
+  <div class="linktwo">
+  <%= link_to "Become a renter", new_user_registration_path,  class: "btn btn-ghost" %>
+  </div>
+</div>
