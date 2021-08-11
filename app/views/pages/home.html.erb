@@ -16,77 +16,19 @@
 </div>
 
 <div class="container mt-5">
-  <h1>Here are the top 3 of Wizrent</h1>
-  <div class="ctn cardcont">
-    <div class="card-trip">
-      <img src="http://hp-api.herokuapp.com/images/harry.jpg" />
-      <div class="card-trip-infos">
-        <div>
-          <h2>Title here</h2>
-          <p>Short description here!</p>
-          <h2 class="card-trip-pricing">£99.99 per day</h2>
-        </div>
-      </div>  
-    </div>
-    <div class="card-trip">
-      <img src="http://hp-api.herokuapp.com/images/harry.jpg" />
-      <div class="card-trip-infos">
-        <div>
-          <h2>Title here</h2>
-          <p>Short description here!</p>
-          <h2 class="card-trip-pricing">£99.99 per day</h2>
-        </div>
-      </div>  
-    </div>
-    <div class="card-trip">
-      <img src="http://hp-api.herokuapp.com/images/harry.jpg" />
-      <div class="card-trip-infos">
-        <div>
-          <h2>Title here</h2>
-          <p>Short description here!</p>
-          <h2 class="card-trip-pricing">£99.99 per day</h2>
-        </div>
-      </div>  
-    </div>
+  <h1>Here are the top <%= @wizards.count %> of Wizrent</h1>
+    <div class="ctn cardcont">
+    <% @wizards.each do |wizard| %>
+      <div class="card-trip">
+        <img src="<%= wizard.picture_url %>" alt="">
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= wizard.name %></h2>
+            <p><%= wizard.species %></p>
+            <h2 class="card-trip-pricing"><%= wizard.price %>.-</h2>
+          </div>
+        </div>  
+      </div>
+    <% end %>
   </div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
