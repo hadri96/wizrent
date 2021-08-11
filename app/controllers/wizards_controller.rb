@@ -18,7 +18,7 @@ class WizardsController < ApplicationController
     @wizard = Wizard.new(wizard_params)
     @wizard.user = current_user
     if @wizard.save
-      redirect_to wizards_path
+      redirect_to wizard_path(@wizard)
     else
       render :new
     end
@@ -40,7 +40,7 @@ class WizardsController < ApplicationController
   def my_wizards
     @wizards = current_user.wizards
   end
-  
+
 
   private
 
