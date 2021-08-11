@@ -1,14 +1,20 @@
-<%= simple_form_for @wizard do |f| %>
-  <%= f.input :name %>
-  <%= f.input :eye_color %>
-  <%= f.input :hair_color %>
-  <%= f.input :house %>
-  <%= f.input :price %>
-  <%= f.input :picture_url %>
-  <%= f.input :description %>
-  <%= f.input :species %>
-  <%= f.submit class: 'btn btn-primary' %>
-<% end %>
+<div class="container">
+  <div class="col-12 col-sm-8 col-md-4 offset-sm-2 offset-md-4 w-50">
 
-<%= link_to 'Show', @wizard %> |
-<%= link_to 'Back', wizards_path %>
+    <h1>Create a new wizard</h1>
+    <%= simple_form_for @wizard do |f| %>
+      <%= f.input :name %>
+      <%= f.input :eye_color %>
+      <%= f.input :hair_color %>
+      <%= f.input :house %>
+      <%= f.input :price %>
+      <%= f.input :picture_url %>
+      <%= f.input :description %>
+      <%= f.input :species %>
+      <div class="d-flex justify-content-between my-4">
+        <%= f.submit class: 'btn btn-ghost ml-0' %> 
+        <%= link_to 'Back', wizards_path, class:"btn btn-ghost mr-0"%>
+      </div>
+    <% end %>
+  </div>
+</div>
