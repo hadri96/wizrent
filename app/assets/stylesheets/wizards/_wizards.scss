@@ -1,0 +1,12 @@
+.wizards-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  // grid-template-rows: 1fr, 1fr;
+}
+
+h1 {
+  text-align: center;
+  height: 400px;
+  object-fit: cover;
+}
