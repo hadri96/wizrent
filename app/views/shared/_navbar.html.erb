@@ -7,7 +7,7 @@
 
 
   <div class="linkone" id="navbarSupportedContent">
-    <%= link_to "Wizards", "#", class: "btn btn-noborder" %>
+    <%= link_to "Wizards", wizards_path, class: "btn btn-noborder" %>
   </div>
   <div class="linktwo collapse navbar-collapse">
   <% if user_signed_in? %>
@@ -24,8 +24,8 @@
         </li>
     </ul>
   <% else %>
-    <li class ="nav-item active"><%= link_to "Become a renter", new_user_registration_path,  class: "btn btn-noborder" %></li>
-    <li class ="nav-item active"><%= link_to "Login", new_user_session_path, class: "btn btn-noborder" %></li>
+    <li class ="nav-item active btn btn-noborder"><%= link_to "Become a renter", new_user_registration_path, style:"color:white; text-decoration:none;" %></li>
+    <li class ="nav-item active btn btn-noborder"><%= link_to "Login", new_user_session_path, style:"color:white; text-decoration:none;" %></li>
   <% end %>
   </div>
 </div>

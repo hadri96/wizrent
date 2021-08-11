@@ -7,5 +7,5 @@
 <%= @wizard.species %>
 
 
-<%= link_to 'Edit', edit_wizard_path(wizard) %>
-<%= link_to 'Destroy', wizard, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Edit', edit_wizard_path(@wizard) %>
+<%= link_to 'Destroy', @wizard, method: :delete, data: { confirm: 'Are you sure?' } %>
