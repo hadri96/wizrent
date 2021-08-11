@@ -1,11 +1,17 @@
-<%= @wizard.name %>
-<%= @wizard.eye_color %>
-<%= @wizard.hair_color %>
-<%= @wizard.house %>
-<%= @wizard.price %>
-<%= @wizard.description %>
-<%= @wizard.species %>
 
+<div class="container">
+  <div class="text">
+    <h1><%= @wizard.name %></h1><br>
+    <p>Eye colour: <%= @wizard.eye_color %><br></p>
+    <p>Hair colour: <%= @wizard.hair_color %><br></p>
+    <p>House: <%= @wizard.house %><br></p>
+    <p>Price: <%= @wizard.price %><br></p>
+    <p>description: <%= @wizard.description %><br></p>
+    <p>species: <%= @wizard.species %><br></p>
+  </div>
 
-<%= link_to 'Edit', edit_wizard_path(@wizard) %>
-<%= link_to 'Destroy', @wizard, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <div class="d-flex justify-content-between my-4">
+    <%= link_to 'Edit', edit_wizard_path(@wizard), class:"btn btn-ghost mr-0"%>
+    <%= link_to 'Destroy', @wizard, class:"btn btn-ghost mr-0", method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+</div>
