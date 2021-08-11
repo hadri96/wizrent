@@ -1,0 +1,19 @@
+<div class="banner mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_url("my_wizards_banner.jpg") %>);">
+  <div>
+    <h1 id="title-index">My Wizards</h1>
+  </div>
+</div>
+
+<div class="container text-center">
+  <div class="wizards-list">
+   <% @wizards.each do |wizard| %>
+    <div class="card-category card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= wizard.picture_url %>)">
+      <%= link_to wizard.name, wizard_path(wizard) %>
+      <h5><%= wizard.price%> CHF</h5>
+    </div>
+  <% end %>
+  </div>
+
+  <%= link_to 'Create a wizard', new_wizard_path, class: "btn btn-primary mt-4 mb-4" %>
+</div>
+
