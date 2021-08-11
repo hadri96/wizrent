@@ -1,4 +1,3 @@
-
 class OrdersController < ApplicationController
   before_action :set_orders, only: %i[ show create ]
 
@@ -6,7 +5,6 @@ class OrdersController < ApplicationController
   end
 
   def index
-
   end
 
   def new
@@ -36,4 +34,3 @@ class OrdersController < ApplicationController
   end
 
 end
-
