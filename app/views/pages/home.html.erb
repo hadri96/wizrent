@@ -16,14 +16,14 @@
 </div>
 
 <div class="container mt-5">
-  <h1>Here are the top <%= @wizards.count %> of Wizrent</h1>
+  <h1 id="titlehome">Here are the top <%= @wizards.count %> of Wizrent</h1>
     <div class="ctn cardcont">
     <% @wizards.each do |wizard| %>
       <div class="card-trip">
         <img src="<%= wizard.picture_url %>" alt="">
         <div class="card-trip-infos">
           <div>
-            <h2><%= wizard.name %></h2>
+            <h2><%= link_to wizard.name, wizard_path(wizard), style:"color:white;"%></h2>
             <p><%= wizard.species %></p>
             <h2 class="card-trip-pricing"><%= wizard.price %>.-</h2>
           </div>
