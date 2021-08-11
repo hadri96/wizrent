@@ -5,7 +5,7 @@
   <div class="col-12 col-sm-8 col-md-4 offset-sm-2 offset-md-4 w-50">
 
     <h1>Book <%= @wizard.name %></h1>
-    <%= simple_form_for @order do |f| %>
+    <%= simple_form_for [ @wizard, @order ] do |f| %>
       <%= f.input :start_date %>
       <%= f.input :end_date %>
       <div class="d-flex justify-content-between my-4">
