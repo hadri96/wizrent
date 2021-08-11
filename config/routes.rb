@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :wizards do
     resources :orders, only: [ :show, :new, :create ]
+    get "my_wizards", on: :collection
   end
   resources :wizards, only: [ :destroy ]
 end

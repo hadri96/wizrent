@@ -37,6 +37,11 @@ class WizardsController < ApplicationController
     redirect_to wizards_path
   end
 
+  def my_wizards
+    @wizards = current_user.wizards
+  end
+  
+
   private
 
   def set_wizard
