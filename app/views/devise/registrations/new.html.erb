@@ -24,13 +24,11 @@
                       input_html: { autocomplete: "new-password" } %>
         </div>
 
-        <div class="d-flex justify-content-between align-items-center flex-row">
+        <div class="d-flex justify-content-between">
           <div class="form-actions">
-            <%= f.button :submit, "Sign up", class: "btn btn-ghost"%>
+            <%= f.button :submit, "Sign up", class: "btn btn-ghost ml-0"%>
           </div>
-          <div class="btn btn-ghost">
-            <%= render "devise/shared/links" %>
-          </div>
+          <%= render "devise/shared/links" %>
         </div>
       <% end %>
 
