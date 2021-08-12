@@ -23,13 +23,14 @@ require("channels")
 // ----------------------------------------------------
 
 import { initUpdateNavbarOnScroll } from '../components/navbar';
+import { getDates } from '../components/price-calculator';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   initUpdateNavbarOnScroll();
-  console.log("coucou")
 });
 
+document.addEventListener('click')
 // External imports
 import "bootstrap";
 
