@@ -4,14 +4,16 @@
     <br>
     <p>At Wizrent you got the chance to rent a wizard & spent time with.</p>
     <br>
-    <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-      <div class="search-form-control form-group">
-        <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-        <button name="button" type="submit" class="btn btn-flat">
-          <i class="fas fa-search"></i> Search
-        </button>
-      </div>
-    </form>
+    <div class="">
+      <%= form_tag wizards_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a wizard"
+      %>
+      <%= submit_tag "Search", class: "btn btn-ghost" %>
+      <% end %>
+    </div>
   </div>
 </div>
   
@@ -52,5 +54,6 @@
     <% end %>
   </div>
 </div>
+
 <%# <iframe width="100%" height="100" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/430111&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
     </iframe> %>
