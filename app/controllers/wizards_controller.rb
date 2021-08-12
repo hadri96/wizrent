@@ -4,7 +4,11 @@ class WizardsController < ApplicationController
   skip_before_action :authenticate_user!, only:[:index, :show]
 
   def index
-    @wizards = Wizard.all
+    if params[:query].present?
+      @wizards = Wizard.similarity_like(params[:query])
+    else
+      @wizards = Wizard.all
+    end
   end
 
   def show

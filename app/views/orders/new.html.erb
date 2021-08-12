@@ -3,7 +3,7 @@
 
 <div class="container">
   <div class="col-12 col-sm-8 col-md-4 offset-sm-2 offset-md-4 w-50 log-form">
-    <h1>Book <%= @wizard.name %></h1>
+    <h1 class="toto"> Book <%= @wizard.name %></h1>
     <%= simple_form_for [ @wizard, @order ] do |f| %>
       <%= f.input :start_date %>
       <p style="color:transparent; font-size:smaller;" id='start-date-tag'>empty</p>

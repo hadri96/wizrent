@@ -1,0 +1,28 @@
+.contain {
+  padding-top: 100px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.spices {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1px;
+  grid-column-gap: 5px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.spices img {
+  border-radius: 30px;
+  width: 175px;
+}
+
+.contain h2 {
+  padding-bottom: 50px;
+}
+
+.linkspic {
+  padding-top: 10px;
+}
