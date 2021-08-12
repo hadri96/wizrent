@@ -57,7 +57,6 @@ const getDateDifference = () => {
 const calculatePrice = () => {
   document.addEventListener("change", (_event) => {
     const duration = getDateDifference();
-    console.log(duration);
     let total = 0
     const dailyPrice = document.getElementById("order_amount")
     const totalDisplay = document.getElementById("total");

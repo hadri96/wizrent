@@ -1,5 +1,3 @@
-require 'date'
-
 class Order < ApplicationRecord
   belongs_to :wizard
   belongs_to :user
