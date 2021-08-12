@@ -22,16 +22,16 @@
     <img src="<%= asset_path('Dwarf.jpg') %>" alt="">
     <img src="<%= asset_path('Elf.jpg') %>" alt="">
     <img src="<%= asset_path('Human.jpg') %>" alt="">
-    <h2>Druid</h2>
-    <h2>Dwarf</h2>
-    <h2>Elf</h2>
-    <h2>Human</h2>
+    <h2 class="linkspic"><%= link_to "Druid", wizards_path, style:"color:white;" %></h2>
+    <h2 class="linkspic"><%= link_to "Dwarf", wizards_path, style:"color:white;" %></h2>
+    <h2 class="linkspic"><%= link_to "Elf", wizards_path, style:"color:white;" %></h2>
+    <h2 class="linkspic"><%= link_to "Human", wizards_path, style:"color:white;" %></h2>
   </div>
 </div>
 
 <div class="ctn home-one">
   <div class="home-pic">
-    <h1>Do you like magic ?</h1>
+    <h1><%= link_to "Do you like magic ?", new_user_session_path, style:"color:white;" %></h1>
   </div>
 </div>
 
@@ -43,7 +43,7 @@
         <img src="<%= wizard.picture_url %>" alt="">
         <div class="card-trip-infos">
           <div>
-            <h2><%= link_to wizard.name, wizard_path(wizard), style:"color:white;"%></h2>
+            <h2><%= link_to wizard.name, wizard_path(wizard), style:"color:white;" %></h2>
             <p><%= wizard.species %></p>
             <h2 class="card-trip-pricing"><%= wizard.price %>.-</h2>
           </div>
