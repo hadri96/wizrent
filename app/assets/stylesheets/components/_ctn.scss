@@ -20,3 +20,23 @@ h1 {
 #titlehome {
   margin-top: 40px;
 }
+
+.home-one {
+  display: flex;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  text-align: center;
+  justify-content: center;
+  height: 600px;
+}
+.home-pic {
+  background-image: asset-url('homecom.jpg');
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  width: 60%;
+  border-radius: 30px;
+  padding-bottom: 30px;
+  align-items: center;
+  box-shadow: 0 0 15px #174217;
+}
