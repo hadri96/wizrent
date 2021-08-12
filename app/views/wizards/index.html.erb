@@ -7,10 +7,12 @@
 <div class="container text-center">
   <div class="wizards-list">
    <% @wizards.each do |wizard| %>
-    <div class="card-category card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= wizard.picture_url %>); background-position: 20% 20%;">
-      <%= link_to wizard.name, wizard_path(wizard) %>
-      <h5><%= wizard.price%> CHF</h5>
-    </div>
+      <%= link_to wizard_path(wizard) do %>
+        <div class="card-category card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= wizard.picture_url %>); background-position: 20% 20%;">
+          <h2><%= wizard.name%></h2>
+          <h5><%= wizard.price%> CHF</h5>
+        </div>
+      <% end %>
   <% end %>
   </div>
 
