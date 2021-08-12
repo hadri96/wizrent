@@ -1,5 +1,5 @@
 .contain {
-  padding-top: 70px;
+  padding-top: 100px;
   padding-bottom: 40px;
   text-align: center;
 }
@@ -9,7 +9,9 @@
   place-items: center;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 1px;
-  grid-column-gap: 5px
+  grid-column-gap: 5px;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .spices img {
@@ -19,4 +21,8 @@
 
 .contain h2 {
   padding-bottom: 50px;
+}
+
+.linkspic {
+  padding-top: 10px;
 }
