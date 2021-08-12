@@ -1,5 +1,4 @@
 class OrdersController < ApplicationController
-  before_action :set_orders, only: %i[ show create ]
 
   def show
   end
@@ -18,21 +17,16 @@ class OrdersController < ApplicationController
     @order.user = current_user
     @order.wizard = @wizard
 
-    if @order.save
-      redirect_to wizard_path(@wizard)
-    else
-      render :new
+    if !@order.save
+      render "wizards/show"
     end
   end
 
   private
 
-  def orders
-    @order = Order.find(params[:id])
-  end
 
   def order_params
-    params.require(:order).permit(:amount, :start_date, :end_date)
+    params.require(:order).permit(:start_date, :end_date)
   end
 
 end
