@@ -4,29 +4,27 @@
     <br>
     <p>At Wizrent you got the chance to rent a wizard & spent time with.</p>
     <br>
-    <div class="">
+    <div class="form-for">
       <%= form_tag wizards_path, method: :get do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Find a wizard"
-      %>
-      <%= submit_tag "Search", class: "btn btn-ghost" %>
+      <%= text_field_tag :query, params[:query], class: "form-cont", placeholder: "Find a wizard" %>
+      <div class="buton-form">
+        <%= submit_tag "Search", class: "btn btn-ghost" %>
+      </div>
       <% end %>
     </div>
   </div>
 </div>
   
 <div class="contain">
-  <h2>What's your favorite spices ?</h2>
+  <h2>What's your favorite species ?</h2>
   <div class="spices">
-    <img src="<%= asset_path('Druid.jpg') %>" alt="">
-    <img src="<%= asset_path('Dwarf.jpg') %>" alt="">
-    <img src="<%= asset_path('Elf.jpg') %>" alt="">
-    <img src="<%= asset_path('Human.jpg') %>" alt="">
-    <h2 class="linkspic"><%= link_to "Druid", wizards_path, style:"color:white;" %></h2>
-    <h2 class="linkspic"><%= link_to "Dwarf", wizards_path, style:"color:white;" %></h2>
-    <h2 class="linkspic"><%= link_to "Elf", wizards_path, style:"color:white;" %></h2>
+    <img src="<%= asset_path('giant.jpg') %>" alt="">
+    <img src="<%= asset_path('goblin.jpg') %>" alt="">
+    <img src="<%= asset_path('creature.jpg') %>" alt="">
+    <img src="<%= asset_path('human.jpg') %>" alt="">
+    <h2 class="linkspic"><%= link_to "Giant", wizards_path, style:"color:white;" %></h2>
+    <h2 class="linkspic"><%= link_to "Goblin", wizards_path, style:"color:white;" %></h2>
+    <h2 class="linkspic"><%= link_to "House Elf", wizards_path, style:"color:white;" %></h2>
     <h2 class="linkspic"><%= link_to "Human", wizards_path, style:"color:white;" %></h2>
   </div>
 </div>
