@@ -3,9 +3,6 @@ class OrdersController < ApplicationController
   def show
   end
 
-  def index
-  end
-
   def new
     @wizard = Wizard.find(params[:wizard_id])
     @order = Order.new
@@ -21,6 +18,11 @@ class OrdersController < ApplicationController
       render "wizards/show"
     end
   end
+
+  def my_orders
+    @orders = current_user.orders
+  end
+  
 
   private
 

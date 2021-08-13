@@ -1,0 +1,16 @@
+<div class="banner mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_url("my_orders_banner.jpg") %>);">
+  <div>
+    <h1 id="title-index">My Orders </h1>
+  </div>
+</div>
+
+<div class="container text-center">
+  <div class="orders-list">
+   <% @orders.each do |order| %>
+    <div class="card-category card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= order.picture_url %>)">
+      <%= link_to order.start_date, order_path(order) %>
+      <h5><%= order.end_date%> CHF</h5>
+    </div>
+  <% end %>
+  </div>
+</div>
