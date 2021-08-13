@@ -26,3 +26,52 @@
 .linkspic {
   padding-top: 10px;
 }
+
+.order-card {
+  display: flex;
+  flex-direction: row;
+  border-radius: 4px;
+  box-shadow: 5px 5px 33px 0px  rgba(255,255,255,0.75);
+  width: 950px;
+  height: 400px;
+  margin: 200px 100px 50px 250px;
+}
+
+.order-card-wizard {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  justify-items: end;
+  border-right: 1px solid;
+  padding: 30px;
+}
+
+.order-card-wizard img{
+  border-radius: 4px;
+  height: 175px ;
+  position: absolute;
+  width: fit-content;
+  right: 30px;
+}
+
+.order-card-details {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 350px;
+}
+
+.order-card-order {
+  padding: 30px 30px 20px 30px;
+  position: absolute;
+  border-bottom: 1px solid;
+  width: 350px;
+}
+
+.order-card-user {
+  padding-top: 20px;
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  margin-top: 20px;
+}
