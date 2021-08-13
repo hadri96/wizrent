@@ -22,7 +22,7 @@ class WizardsController < ApplicationController
   def create
     @wizard = Wizard.new(wizard_params)
     @wizard.user = current_user
-    if @wizard.save
+    if @wizard.save!
       redirect_to wizard_path(@wizard)
     else
       render :new
