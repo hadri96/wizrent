@@ -8,9 +8,9 @@
 require 'json'
 require 'open-uri'
 
-User.destroy_all
-Wizard.destroy_all
 Order.destroy_all
+Wizard.destroy_all
+User.destroy_all
 
 url = 'https://hp-api.herokuapp.com/api/characters'
 characters_serialized = URI.open(url).read
