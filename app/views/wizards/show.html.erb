@@ -6,6 +6,8 @@
   <div class="card-product-infos">
     <% if @wizard.photo.attached? %>
       <img id="demoObject" src= <%= cl_image_path(@wizard.photo.key) %>>
+    <% else %>
+      <img id="demoObject" src= <%= image_url(@wizard.picture_url) %>>
     <% end %>
     <div class="text">   
       <h1><%= @wizard.name %><br></h1>
