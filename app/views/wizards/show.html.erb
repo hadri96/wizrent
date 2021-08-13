@@ -4,8 +4,10 @@
 <div class="card-product">
   <img src=" <%= asset_url("showbanner.jpg") %>" alt="castle">
   <div class="card-product-infos">
-    <img id="demoObject" src= <%= @wizard.picture_url %>>
-    <div class="text">
+    <% if @wizard.photo.attached? %>
+      <img id="demoObject" src= <%= cl_image_path(@wizard.photo.key) %>>
+    <% end %>
+    <div class="text">   
       <h1><%= @wizard.name %><br></h1>
       <div class="info">
         <p><i class="fas fa-eye"></i> <%= @wizard.eye_color %><br></p>
@@ -25,9 +27,9 @@
     <%= link_to 'Edit', edit_wizard_path(@wizard), class:"btn btn-ghost mr-0" %>
     <%= link_to 'Destroy', @wizard, class:"btn btn-ghost mr-0", method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
+<% else %>
+  <div class="d-flex justify-content-center my-4">
+    <%= link_to 'Book this wizard', new_wizard_order_path(@wizard), class:"btn btn-ghost mr-0"%>
+  </div>
 <% end %>
-
 </div>
-
-
-

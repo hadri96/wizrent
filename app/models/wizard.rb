@@ -1,6 +1,7 @@
 class Wizard < ApplicationRecord
   belongs_to :user, dependent: :destroy
   has_many :orders
+  has_one_attached :photo
 
   validates :name, presence: true, uniqueness: true
   validates :species, presence: true
