@@ -7,9 +7,9 @@
 <div class="container text-center">
   <div class="orders-list">
    <% @orders.each do |order| %>
-    <div class="card-category card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= order.picture_url %>)">
-      <%= link_to order.start_date, order_path(order) %>
-      <h5><%= order.end_date%> CHF</h5>
+    <div class="card-category card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= order.wizard.picture_url %>)">
+      <%= link_to order.start_date, my_orders_orders_path(order) %>
+      <h5><%= order.end_date %> CHF</h5>
     </div>
   <% end %>
   </div>
