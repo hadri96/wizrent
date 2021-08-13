@@ -66,7 +66,7 @@ const calculatePrice = () => {
       totalDisplay.style.color = 'red'
       totalDisplay.style.borderColor = "red"
     } else {
-      total = dailyPrice.value * duration;
+      total = parseInt(dailyPrice.value * duration);
       totalDisplay.innerHTML = `Total : ${total} CHF`
     }
   });
