@@ -5,6 +5,10 @@ class Order < ApplicationRecord
   validates :end_date, presence: true
   after_validation :calculate_price
 
+  def to_s
+    wizard.name
+  end
+
   private
 
   def calculate_price

@@ -3,14 +3,14 @@
 </div>
 <div class="order-card">
   <div class="order-card-wizard">
-    <img src=<%= @wizard.picture_url %> alt="<% @wizard.name %>"/>
+    <img src=<%= @order.wizard.picture_url %> alt="<% @order.wizard.name %>"/>
     <h3><strong>Your wizard</strong></h5>
-    <p><strong>Name:</strong> <%=@wizard.name %></p>
-    <p><strong>Species:</strong> <%=@wizard.species %></p>
-    <p><strong>House:</strong> <%=@wizard.house %></p>
-    <p><strong>Rate:</strong> <%=@wizard.price %></p>
+    <p><strong>Name:</strong> <%=@order.wizard.name %></p>
+    <p><strong>Species:</strong> <%=@order.wizard.species %></p>
+    <p><strong>House:</strong> <%=@order.wizard.house %></p>
+    <p><strong>Rate:</strong> <%=@order.wizard.price %></p>
     <div class="order-card-wizard-text">
-      <p><strong>Description:</strong> <%=@wizard.description %></p>
+      <p><strong>Description:</strong> <%=@order.wizard.description %></p>
     </div>
   </div>
   <div class="order-card-details">
@@ -31,6 +31,3 @@
 <div class="container d-flex justify-content-center">
   <%= link_to "Back to wizards", wizards_path, class: "btn btn-ghost"%>
 </div>
-
-
-

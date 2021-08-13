@@ -8,8 +8,9 @@
   <div class="wizards-list">
    <% @orders.each do |order| %>
     <div class="card-category card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= order.wizard.picture_url %>); background-position: 20% 20%; height: 350px; width: 100%; padding-top: 75%;">
-      <%= link_to order.start_date, my_orders_orders_path(order) %>
-      <h5><%= order.end_date %> CHF</h5>
+      <%= link_to order.wizard.name, order %>
+
+      <h5><%= order.end_date %> - <%= order.end_date %></h5>
     </div>
   <% end %>
   </div>
