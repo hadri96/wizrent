@@ -1,14 +1,15 @@
 <div class="banner mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_url("index_banner.jpg") %>);">
   <div>
     <h1 id="title-index">Wizards</h1>
+    <h3>what we have to offer :</h3>
   </div>
 </div>
 
-<div class="container text-center">
+<div class="container text-center" style="margin-top: 130px;">
   <div class="wizards-list">
    <% @wizards.each do |wizard| %>
       <%= link_to wizard_path(wizard) do %>
-        <div class="card-category card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= wizard.picture_url %>); background-position: 20% 20%;">
+        <div class="card-category card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= wizard.picture_url %>); background-position: 20% 20%; height: 350px; width: 100%; padding-top: 75%;">
           <h2><%= wizard.name%></h2>
           <h5><%= wizard.price%> CHF</h5>
         </div>
