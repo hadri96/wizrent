@@ -64,10 +64,10 @@ descriptions = {
                   "Argus Filch" => "Argus Filch was the Hogwarts caretaker, a cantankerous, nasty man who detests the students. He knew the secret passageways and hidden doors of Hogwarts better than anyone except Fred and George Weasley (and now Harry, thanks to the Marauders’ Map). Filch was a Squib, which means that he was born of a wizarding family but cannot do magic. The frustration this caused is partly to blame for his horrible and vindictive attitude."
                 }
 
-
 characters.map! do |character|
   character['eyeColour'] = 'brown' if character['eyeColour'] == ''
   character['house'] = 'unknown' if character['house'] == ''
+  character['species'] = 'giant' if character['name'] == 'Rubeus Hagrid'
   character = {
     name: character['name'],
     species: character['species'],
@@ -80,6 +80,62 @@ characters.map! do |character|
     description: descriptions[character['name']]
   }
 end
+
+Dobby = {
+  name: 'Dobby',
+  species: 'house elf',
+  sex: 'male',
+  house: 'none',
+  eye_color: 'blue',
+  hair_color: 'bald',
+  picture_url: 'http://www.the-leaky-cauldron.org/wp-content/uploads/assets/dobby3.jpg',
+  price: (50..150).to_a.sample,
+  description: 'Dobby served the Malfoy family. His masters were Dark Wizards who treated him cruelly. He was freed by Harry Potter who gave him a sock which sparked a passion this piece of clothing. Since then, he regularly offers socks to Harry for Christmas. He always shows great devotion to his friends.'
+}
+
+characters << Dobby
+
+Kreacher = {
+  name: 'Kreacher',
+  species: 'house elf',
+  sex: 'male',
+  house: 'none',
+  eye_color: 'pale blue',
+  hair_color: 'bald',
+  picture_url: 'http://img2.wikia.nocookie.net/__cb20100621114028/harrypotter/images/a/a0/Krech.jpg',
+  price: (50..150).to_a.sample,
+  description: 'Kreacher served the Black family for his entire life. His masters were Dark Wizards who treated him cruelly but he still remained extremely loyal to them and admires them very much. He helped Harry to destroy the Horcruxes by finding Mondingus Fletcher who had stolen Regulus Black\'s necklace.'
+}
+
+characters << Kreacher
+
+Griphook = {
+  name: 'Griphook',
+  species: 'goblin',
+  sex: 'male',
+  house: 'none',
+  eye_color: 'black',
+  hair_color: 'brown',
+  picture_url: 'https://static.wikia.nocookie.net/harrypotter/images/5/53/Griphook_TDH_SF.png',
+  price: (50..150).to_a.sample,
+  description: 'Griphook works at the Gringotts Wizarding Bank in Diagon Alley. He has very little trust in wizards and because of that he betrays Harry when they commit the theft of Helga Hufflepuff\'s Cup in order to get Godric Griffyndor\'s sword. As a Goblin he has a keen eye to evaluate the value of precious goods.'
+}
+
+characters << Griphook
+
+Flitwick = {
+  name: 'Filius Flitwick',
+  species: 'goblin',
+  sex: 'male',
+  house: 'Ravenclaw',
+  eye_color: 'brown',
+  hair_color: 'brown',
+  picture_url: 'https://static.wikia.nocookie.net/harrypotter/images/4/4b/Flitwickarmourbattle.png',
+  price: (50..150).to_a.sample,
+  description: 'Flitwick is only part-goblin which explains why he has some human traits. His intelligence allowed him to become a professor at Hogwarts to teach spells. He played a central role during the last stand against the Dark Forces to defend the school and the students from Death Eaters.'
+}
+
+characters << Flitwick
 
 colin = User.new({username: "colino", password: "picasso96", email: "colin@gmail.com" })
 colin.save!
