@@ -1,18 +1,23 @@
-<div class="card-product" id="demoObject">
-  <img src=" <%= asset_url("show_card_banner.jpg") %>" alt="castle">
+<div class="top-page">
+</div>
+
+<div class="card-product">
+  <img src=" <%= asset_url("showbanner.jpg") %>" alt="castle">
   <div class="card-product-infos">
     <% if @wizard.photo.attached? %>
       <img id="demoObject" src= <%= cl_image_path(@wizard.photo.key) %>>
     <% end %>
     <div class="text">   
       <h1><%= @wizard.name %><br></h1>
-      <p><i class="fas fa-eye"></i> <%= @wizard.eye_color %><br></p>
-      <p>Hair colour: <%= @wizard.hair_color %><br></p>
-      <p><i class="fas fa-home-lg-alt"></i> <%= @wizard.house %><br></p>
-      <p><i class="fas fa-coins"></i> <%= @wizard.price %>.-<br></p>
-      <p>species: <%= @wizard.species %><br></p>
-      <h6>Description</h6>
-      <p style="max-width: 600px;"><%= @wizard.description %><br></p>
+      <div class="info">
+        <p><i class="fas fa-eye"></i> <%= @wizard.eye_color %><br></p>
+        <p>Hair colour: <%= @wizard.hair_color %><br></p>
+        <p><i class="fas fa-home-lg-alt"></i> <%= @wizard.house %><br></p>
+        <p><i class="fas fa-coins"></i> <%= @wizard.price %>.-<br></p>
+        <p>species: <%= @wizard.species %><br></p>
+        <h6>Description</h6>
+        <p style="max-width: 600px;"><%= @wizard.description %><br></p>
+      </div>
     </div>
   </div>
 </div>
@@ -27,3 +32,4 @@
     <%= link_to 'Book this wizard', new_wizard_order_path(@wizard), class:"btn btn-ghost mr-0"%>
   </div>
 <% end %>
+</div>
